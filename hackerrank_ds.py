@@ -24,21 +24,24 @@ def arrayManipulation(n, queries):
     start_lst = [0] * n
 # queries here are list of lists
 
-    for q in queries:
-        # make first pos zero index
-        start_i = q[0] - 1
-        fin_i = q[1]
-        update = q[2]
+# This strategy runtimed out due to the nested loop
+    # for q in queries:
+    #     # make first pos zero index
+    #     start_i = q[0] - 1
+    #     fin_i = q[1]
+    #     update = q[2]
 
-        for i in range(start_i, fin_i):
-            start_lst[i] += update
-    return max(start_lst)
+    #     for i in range(start_i, fin_i):
+    #         start_lst[i] += update
+    # return max(start_lst)
 
-    # updated_indices = {}
-    # for i in range(1, n + 1):
-    #     updated_indices[i] = updated_indices.get(updated_indices[i], 1) + 1
+    updated_indices = {}
+    for i in range(1, n + 1):
+        updated_indices[i] = updated_indices.get(updated_indices[i], 0) + 1
 
-    # for i in range()
+    for i in range(len(queries)):
+        
+
         # remember, 0 index is pos 1
 
 if __name__ == '__main__':
